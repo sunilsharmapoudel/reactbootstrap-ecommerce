@@ -1,24 +1,18 @@
-import { Container, Row, Col } from "react-bootstrap";
-import Footer from "./components/Footer";
+import { Container } from "react-bootstrap";
 import Header from "./components/Header";
-import Product from "./components/Product";
-import products from "./data";
-import ProductPage from "./pages/ProductPage";
+import Footer from "./components/Footer";
+import { Outlet } from "react-router-dom"
+
 
 function App() {
   return (
     <>
       <Header />
-      <Container>
-        <ProductPage />
-        <Row>
-          {products.map((product) => (
-            <Col sm={12} md={6} lg={4} xl={3}>
-              <Product product={product} />
-            </Col>
-          ))}
-        </Row>
-      </Container>
+      <main className="my-3">
+        <Container>
+          <Outlet />
+        </Container>
+      </main>
       <Footer />
     </>
   );
