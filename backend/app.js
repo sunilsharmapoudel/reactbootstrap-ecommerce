@@ -17,7 +17,7 @@ app.use(logger);
 
 //routes
 app.use("/api/v1/users", userRouter);
-app.use("/api/v1/product", productRouter);
+app.use("/api/v1/products", productRouter);
 
 //errorhandlers
 app.use(errorHandler);
